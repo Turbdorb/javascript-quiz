@@ -12,14 +12,29 @@ var questionIndex = 0;
 var quizData = [
     {
         question: "What are For Loops useful for?",
-        choices: ["answer 1 for question 1", "To run the same code over and over again, with a different value each time.", "answer 3 for question 1"],
+        choices: ["filler", "To run the same code over and over again, with a different value each time.", "filler"],
         correct: "To run the same code over and over again, with a different value each time."
     },
     {
         question: "this is question TWO",
-        choices: ["answer 1 for question 2", "answer 2 for question 2", "answer 3 for question 2"],
-        correct: "answer 2 for question 2"
+        choices: ["filler", "filler", "filler"],
+        correct: "filler"
     },
+    {
+        question: "this is question TWO",
+        choices: ["filler", "filler", "filler"],
+        correct: "filler"
+    },
+    {
+        question: "this is question TWO",
+        choices: ["filler", "filler", "filler"],
+        correct: "filler"
+    },
+    {
+        question: "this is question TWO",
+        choices: ["filler", "filler", "filler"],
+        correct: "filler"
+    }
 ];
 
 startBtn.addEventListener("click", function () {
@@ -60,11 +75,13 @@ function endQuiz() {
         // takes the inputEl value and save it to local storage
         console.log(inputEl.value);
         localStorage.setItem("initials", inputEl.value);
+        // localStorage.setItem("")
         // sends user to scores page
         window.location.href="score-page.html";
     })
 }
 
+// shows questions after clicking the start quiz button
 function renderQuestions() {
 
     quizContainer.textContent = ''
@@ -89,7 +106,7 @@ function renderQuestions() {
             if (clicked === quizData[questionIndex].correct) {
                 console.log('correct');
                 // add to score
-                score += 50;
+                score += 20;
             } else {
                 console.log("incorrect");
                 // subtract from current time
